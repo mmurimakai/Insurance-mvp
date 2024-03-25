@@ -2,5 +2,5 @@
 
 <main class="flex items-center justify-center rounded-lg gap-4 flex-col">
   <h1><% if(locals.page) {%> <%= locals.page %> <% } else { %> Marketing page <%} %></h1>
-  <section><% if(locals.page) {%> <%= locals.page %> <% } else { %> Marketing page <%} %></section>
+  <section><% if(locals.content) {%> <%= locals.content %> <% } else { %> Marketing content <%} %></section>
 </main>
