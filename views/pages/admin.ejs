@@ -11,54 +11,12 @@
     <div class="bg-white w-full h-full rounded-[1rem] p-20">
       <!-- Dashboard content -->
 
-      <% if(items && role) { %>
-      <div class="flex flex-1 justify-center items-center">
-        <div class="grid grid-cols-2 gap-4 p-8 w-full">
-          <div class="col-span-2">
-            <h2 class="text-xl font-bold mb-5 text-center capitalize">
-              <%= role %> dashboard
-            </h2>
-          </div>
-          <% items.forEach(function(item) { %>
-          <div class="flex flex-col items-center p-4 border border-gray-200 rounded">
-            <%- item.icon %>
-            <p class="font-bold text-lg capitalize">
-              <%= item.label %>
-            </p>
-            <a href="<%= item.link %>" rel="ugc">
-              <% if(/.*add.*/.test(item.link) === true) { %>
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 px-4 py-2 text-green-500 hover:bg-green-200 mt-2">
-                Add New
-              </button>
-              <% } else { %>
-              <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 px-4 py-2 text-green-500 hover:bg-green-200 mt-2">
-                View Details
-              </button>
-              <% } %>
-            </a>
-          </div>
-          <% }) %>
-        </div>
-      </div>
-
-      <% } else { %>
-      <div class="flex flex-1 justify-center items-center">
-        <div class="flex flex-col gap-4 p-8 w-full">
-          <div class="col-span-2">
-            <h2 class="text-xl font-bold mb-5 text-center capitalize">dashboard</h2>
-          </div>
-
-          <!-- Error Message -->
-          <p class="text-center mt-4 text-rose-500">Unable to fetch items, you can join us perhaps
-          </p>
-
-          <p class="text-center mt-4"><a class="text-blue-500 text-bold hover:decoration-wavy" href="/auth">Join
-              now</a></p>
-        </div>
-      </div>
-      <% } %>
 
       <!-- End -->
     </div>
   </div>
 </main>
+
+<script>
+  // TODO: Admin state managment
+</script>
