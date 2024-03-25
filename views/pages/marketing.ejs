@@ -1,0 +1,6 @@
+<%- include( '../' +'components/header'); -%>
+
+<main class="flex items-center justify-center rounded-lg gap-4 flex-col">
+  <h1><% if(locals.page) {%> <%= locals.page %> <% } else { %> Marketing page <%} %></h1>
+  <section><% if(locals.page) {%> <%= locals.page %> <% } else { %> Marketing page <%} %></section>
+</main>

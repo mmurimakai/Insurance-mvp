@@ -1,0 +1,10 @@
+<%- include( '../' +'components/header'); -%>
+<main class="flex items-center justify-center rounded-lg gap-4 flex-col">
+  <h1 class="font-medium text-rose-400">
+    <% if(locals.msg) { %> <%= locals.msg %> <% } else { %> Error occured please contact admin <% } %>
+  </h1>
+  <a href="/" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-black/85 h-10 px-4 py-2">Go back</a>
+</main>
+
+<script>
+</script>
