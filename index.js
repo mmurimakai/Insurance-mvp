@@ -17,7 +17,7 @@ async function initializeDb() {
 initializeDb();
 
 /// Adding view and URL configs
-app.use(express.static(path.join(__dirname, "public")));
+app.use('/public',express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
