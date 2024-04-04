@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "concurrently \"postcss index.css -o public/style/dist.css -w\" \"nodemon index.js\"",
+    "build:css": "postcss index.css -o public/style/dist.css"
   },
   "nodemonConfig": {
     "watch": [
@@ -28,12 +30,17 @@
   },
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "autoprefixer": "^10.4.19",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
   },
   "dependencies": {
     "axios": "^1.6.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
