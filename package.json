@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "start": "node index.js",
-    "dev": "concurrently \"postcss index.css -o public/style/dist.css -w\" \"nodemon index.js\"",
+    "dev": "concurrently \"postcss index.css -o public/style/dist.css -w \" \"nodemon index.js\"",
     "build:css": "postcss index.css -o public/style/dist.css"
   },
   "nodemonConfig": {
