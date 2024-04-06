@@ -2,20 +2,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-const sequelize = require("./db.js");
-
-/// Test db
-
-async function initializeDb() {
-  try {
-    await sequelize.sync();
-  } catch (error) {
-    console.error("Unable to connect to the database:", error);
-  }
-}
-
-initializeDb();
-
 /// Adding view and URL configs
 app.use('/public',express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
