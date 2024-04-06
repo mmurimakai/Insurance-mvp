@@ -2,13 +2,13 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-/// Adding view and URL configs
+/// ⚙️ Adding view and URL configs
 app.use('/public',express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/// Routes
+/// 🚦 Routes
 const home = require("./routes/home");
 const workflow = require("./routes/workflow");
 const admin = require("./routes/admin");
